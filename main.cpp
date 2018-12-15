@@ -1,11 +1,44 @@
-// main.cpp: создали пустой мейн.
-//
-
-#include "stdafx.h"
 
 
-int _tmain(int argc, _TCHAR* argv[])
-{
+#include "StdAfx.h"
+#include <iostream>
+#include "plus.h"
+#include "Min.h"
+
+using namespace std;
+//проверка работы проекта
+int main() {
+	double a;
+	double b;
+	char choise;
+	cout << "Vvedite 2 chisla, razdeliv ih probelom: " << endl;
+	cin >> a >> b;
+
+	do
+	{
+		cout << "::: Vvedite deistvie :::" << endl;
+		cin >> choise;
+
+
+
+		switch (choise)
+		{
+		case ('+'): {
+			cout << Plus(a, b) << endl;
+			break;
+		}
+		case ('-'): {
+			cout << Min(a, b) << endl;
+			break;
+		}
+		
+		default:
+			exit(0);
+			break;
+		}
+
+	} while (choise != 0);
+
+	system("pause");
 	return 0;
 }
-
