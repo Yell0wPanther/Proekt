@@ -1,11 +1,44 @@
-// main.cpp: создали пустой мейн.
-//
+#include "StdAfx.h"
+#include <iostream>
+#include "Umn.h"
+#include "del.h"
 
-#include "stdafx.h"
+
+using namespace std;
+//проверка работы проекта
+int main() {
+	double a;
+	double b;
+	char choise;
+	cout << "Vvedite 2 chisla, razdeliv ih probelom: " << endl;
+	cin >> a >> b;
+
+	do
+	{
+		cout << "::: Vvedite deistvie :::" << endl;
+		cin >> choise;
 
 
-int _tmain(int argc, _TCHAR* argv[])
-{
+
+		switch (choise)
+		{
+		case ('*'): {
+			cout << Umn(a, b) << endl;
+			break;
+		}
+		case ('/'): {
+			cout << Del(a, b) << endl;
+			break;
+		}
+
+
+		default:
+			exit(0);
+			break;
+		}
+
+	} while (choise != 0);
+
+	system("pause");
 	return 0;
 }
-
